@@ -1,0 +1,16 @@
+<svg width="320" height="240" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Systems map</title>
+  <desc id="desc">Connected nodes representing AI, research, product, and platform work.</desc>
+  <rect x="18" y="18" width="284" height="204" rx="8" fill="#FFFDF7" stroke="#1D2528" stroke-width="3"/>
+  <path d="M74 76L154 114L236 64" stroke="#1D2528" stroke-width="3"/>
+  <path d="M74 76L104 164L196 180L236 64" stroke="#1D2528" stroke-width="3"/>
+  <path d="M154 114L196 180" stroke="#1D2528" stroke-width="3"/>
+  <circle cx="74" cy="76" r="26" fill="#0E6B57" stroke="#1D2528" stroke-width="3"/>
+  <circle cx="154" cy="114" r="34" fill="#2F5F98" stroke="#1D2528" stroke-width="3"/>
+  <circle cx="236" cy="64" r="25" fill="#C24B3A" stroke="#1D2528" stroke-width="3"/>
+  <circle cx="104" cy="164" r="22" fill="#E7F1EC" stroke="#1D2528" stroke-width="3"/>
+  <circle cx="196" cy="180" r="28" fill="#0A8F8A" stroke="#1D2528" stroke-width="3"/>
+  <path d="M60 76H88M154 94V134M138 114H170M222 64H250M104 150V178M182 180H210" stroke="#FFFDF6" stroke-width="3" stroke-linecap="round"/>
+  <path d="M42 40H132M42 54H96" stroke="#1D2528" stroke-width="3" stroke-linecap="round"/>
+  <path d="M222 204H278" stroke="#1D2528" stroke-width="3" stroke-linecap="round"/>
+</svg>
