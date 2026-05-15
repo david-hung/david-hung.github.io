@@ -725,10 +725,7 @@ h3 {
   }
 
   .signal-card::after {
-    width: 76px;
-    height: 76px;
-    right: 20px;
-    bottom: 20px;
+    display: none;
   }
 
   .signal-topline {
@@ -747,9 +744,9 @@ h3 {
   .systems-map {
     top: auto;
     right: 18px;
-    bottom: 90px;
-    width: 104px;
-    opacity: 0.78;
+    bottom: 24px;
+    width: 118px;
+    opacity: 0.9;
     z-index: 1;
   }
 
@@ -761,15 +758,7 @@ h3 {
   }
 
   .signal-grid {
-    left: 20px;
-    bottom: 20px;
-    grid-template-columns: repeat(4, 14px);
-    gap: 7px;
-  }
-
-  .signal-grid span {
-    width: 14px;
-    height: 14px;
+    display: none;
   }
 
   .metric-strip {
@@ -883,8 +872,8 @@ h3 {
 
   .systems-map {
     right: 14px;
-    bottom: 82px;
-    width: 86px;
+    bottom: 20px;
+    width: 100px;
   }
 
   .signal-grid {
