@@ -737,20 +737,27 @@ h3 {
   }
 
   .signal-name {
-    max-width: 62%;
+    max-width: 100%;
     margin-top: 72px;
     font-size: clamp(2.75rem, 15vw, 3.6rem);
+    position: relative;
+    z-index: 2;
   }
 
   .systems-map {
-    top: 92px;
+    top: auto;
     right: 18px;
-    width: min(34%, 116px);
+    bottom: 90px;
+    width: 104px;
+    opacity: 0.78;
+    z-index: 1;
   }
 
   .signal-role {
     margin-top: 12px;
     font-size: 0.86rem;
+    position: relative;
+    z-index: 2;
   }
 
   .signal-grid {
@@ -876,7 +883,8 @@ h3 {
 
   .systems-map {
     right: 14px;
-    width: 96px;
+    bottom: 82px;
+    width: 86px;
   }
 
   .signal-grid {
