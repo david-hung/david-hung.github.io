@@ -182,7 +182,7 @@
           <p class="eyebrow">Projects</p>
           <h2>Selected systems and prototypes.</h2>
         </div>
-        <div class="project-grid">
+        <div class="project-grid" id="project-list" data-project-grid>
           <article class="project-card featured">
             <div class="project-number">01</div>
             <h3>LiDAR Object Segmentation &amp; Local Path Planning</h3>
@@ -310,6 +310,9 @@
             </div>
           </article>
         </div>
+        <button class="button secondary project-more" type="button" data-project-toggle aria-controls="project-list" aria-expanded="false" hidden>
+          Show all projects
+        </button>
       </section>
 
       <section class="section skills-section" aria-label="Core skills">

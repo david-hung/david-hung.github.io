@@ -427,6 +427,14 @@ h3 {
   margin-top: 28px;
 }
 
+.project-more {
+  display: none;
+  width: 100%;
+  margin-top: 14px;
+  cursor: pointer;
+  font: inherit;
+}
+
 .project-card {
   display: flex;
   min-height: 330px;
@@ -910,6 +918,14 @@ h3 {
   .project-card {
     min-height: auto;
     padding: 20px;
+  }
+
+  .project-grid.is-collapsed .project-card:nth-child(n + 5) {
+    display: none;
+  }
+
+  .project-more:not([hidden]) {
+    display: inline-flex;
   }
 
   .project-number {
