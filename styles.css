@@ -209,12 +209,34 @@ h3 {
   background: rgba(255, 250, 240, 0.74);
 }
 
+.icon-button {
+  gap: 8px;
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  fill: currentColor;
+}
+
+.linkedin-icon {
+  padding: 3px;
+  border-radius: 4px;
+  background: var(--blue);
+  color: var(--paper);
+}
+
 .hero-visual {
   display: grid;
   gap: 16px;
 }
 
 .signal-card {
+  --diagram-size: clamp(86px, 18%, 124px);
+  --diagram-gap: clamp(28px, 4vw, 44px);
+  --diagram-inset: 26px;
+  --map-width: clamp(112px, 28%, 190px);
   position: relative;
   overflow: hidden;
   min-height: clamp(390px, 34vw, 460px);
@@ -238,9 +260,9 @@ h3 {
 
 .signal-card::after {
   position: absolute;
-  right: 26px;
-  bottom: 26px;
-  width: clamp(90px, 22%, 132px);
+  right: calc(var(--diagram-inset) + ((var(--map-width) - var(--diagram-size)) / 2));
+  bottom: var(--diagram-inset);
+  width: var(--diagram-size);
   aspect-ratio: 1;
   height: auto;
   border: 1px solid rgba(29, 37, 40, 0.55);
@@ -263,8 +285,8 @@ h3 {
 
 .signal-name {
   margin-top: 92px;
-  max-width: min(56%, 360px);
-  font-size: clamp(3.4rem, 6vw, 5.5rem);
+  max-width: calc(100% - var(--map-width) - var(--diagram-inset) - 54px);
+  font-size: clamp(3.25rem, 5.2vw, 5.2rem);
   font-weight: 900;
   line-height: 0.88;
   position: relative;
@@ -273,9 +295,9 @@ h3 {
 
 .systems-map {
   position: absolute;
-  right: 28px;
-  bottom: clamp(112px, 30%, 142px);
-  width: clamp(112px, 31%, 200px);
+  right: var(--diagram-inset);
+  bottom: calc(var(--diagram-inset) + var(--diagram-size) + var(--diagram-gap));
+  width: var(--map-width);
   height: auto;
   filter: drop-shadow(0 18px 26px rgba(29, 37, 40, 0.12));
   z-index: 1;
@@ -401,6 +423,71 @@ h3 {
   font-size: 0.86rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.org-name,
+.logo-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(29, 37, 40, 0.14);
+  border-radius: 5px;
+  background: rgba(255, 253, 247, 0.86);
+  overflow: hidden;
+}
+
+.logo-box img {
+  display: block;
+  max-width: 78%;
+  max-height: 78%;
+  object-fit: contain;
+}
+
+.verizon-box {
+  border-color: rgba(0, 0, 0, 0.36);
+  background: #030303;
+}
+
+.verizon-box img {
+  width: 72%;
+  height: 72%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+
+.tamu-box {
+  border-color: rgba(80, 0, 0, 0.28);
+  background: #500000;
+}
+
+.tamu-box img {
+  width: 130%;
+  height: 130%;
+  max-width: none;
+  max-height: none;
+  filter: none;
+  object-fit: cover;
+}
+
+.tamu-box.large {
+  width: 58px;
+  height: 58px;
+}
+
+.tamu-box.large img {
+  width: 130%;
+  height: 130%;
+  max-width: none;
+  max-height: none;
 }
 
 .timeline-item p,
@@ -607,27 +694,25 @@ h3 {
   }
 
   .signal-card {
+    --diagram-size: clamp(82px, 18%, 108px);
+    --diagram-gap: 34px;
+    --diagram-inset: 22px;
+    --map-width: clamp(108px, 27%, 154px);
     min-height: 390px;
   }
 
   .signal-name {
-    max-width: 58%;
-    font-size: clamp(3.05rem, 5vw, 4.4rem);
+    margin-top: 78px;
+    max-width: calc(100% - var(--map-width) - var(--diagram-inset) - 44px);
+    font-size: clamp(2.85rem, 4.6vw, 4.15rem);
   }
 
-  .systems-map {
-    right: 22px;
-    bottom: 118px;
-    width: clamp(108px, 30%, 170px);
-  }
-
-  .signal-card::after {
-    right: 22px;
-    bottom: 22px;
-    width: clamp(86px, 22%, 118px);
+  .signal-role {
+    margin-top: 12px;
   }
 
   .signal-grid {
+    bottom: 18px;
     grid-template-columns: repeat(4, 14px);
     gap: 7px;
   }
@@ -635,6 +720,31 @@ h3 {
   .signal-grid span {
     width: 14px;
     height: 14px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 621px) {
+  .signal-card {
+    --diagram-size: clamp(78px, 18%, 104px);
+    --diagram-gap: 32px;
+    --diagram-inset: 24px;
+    --map-width: clamp(106px, 26%, 150px);
+    min-height: clamp(360px, 55vw, 430px);
+  }
+
+  .signal-name {
+    margin-top: 72px;
+    max-width: calc(100% - var(--map-width) - var(--diagram-inset) - 40px);
+    font-size: clamp(3rem, 8vw, 4.35rem);
+  }
+
+  .signal-role {
+    max-width: 52%;
+    margin-top: 10px;
+  }
+
+  .signal-grid {
+    bottom: 16px;
   }
 }
 
@@ -811,6 +921,10 @@ h3 {
   }
 
   .signal-card {
+    --diagram-size: clamp(62px, 18vw, 76px);
+    --diagram-gap: 26px;
+    --diagram-inset: 20px;
+    --map-width: clamp(86px, 28vw, 112px);
     min-height: 340px;
     padding: 20px;
     box-shadow: 0 18px 40px rgba(29, 37, 40, 0.12);
@@ -823,10 +937,6 @@ h3 {
 
   .signal-card::after {
     display: block;
-    width: 76px;
-    height: 76px;
-    right: 20px;
-    bottom: 20px;
   }
 
   .signal-topline {
@@ -835,23 +945,21 @@ h3 {
   }
 
   .signal-name {
-    max-width: 100%;
+    max-width: calc(100% - var(--map-width) - var(--diagram-inset) - 24px);
     margin-top: 72px;
-    font-size: clamp(2.75rem, 15vw, 3.6rem);
+    font-size: clamp(2.2rem, 10vw, 2.95rem);
     position: relative;
     z-index: 2;
   }
 
   .systems-map {
     top: auto;
-    right: 18px;
-    bottom: 122px;
-    width: 104px;
     opacity: 0.9;
     z-index: 1;
   }
 
   .signal-role {
+    max-width: 64%;
     margin-top: 12px;
     font-size: 0.86rem;
     position: relative;
@@ -905,6 +1013,15 @@ h3 {
     font-size: 0.74rem;
   }
 
+  .org-name {
+    gap: 8px;
+  }
+
+  .logo-box {
+    width: 38px;
+    height: 38px;
+  }
+
   .timeline-item ul {
     padding-left: 18px;
   }
@@ -956,6 +1073,11 @@ h3 {
     font-size: 0.76rem;
   }
 
+  .logo-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .contact-actions,
   .contact-actions .button {
     width: 100%;
@@ -977,23 +1099,16 @@ h3 {
   }
 
   .signal-card {
+    --diagram-size: 58px;
+    --diagram-gap: 22px;
+    --diagram-inset: 16px;
+    --map-width: 82px;
     min-height: 318px;
     padding: 16px;
   }
 
   .signal-card::before {
     inset-inline: 16px;
-  }
-
-  .signal-card::after {
-    right: 16px;
-    bottom: 16px;
-  }
-
-  .systems-map {
-    right: 14px;
-    bottom: 112px;
-    width: 86px;
   }
 
   .signal-grid {
