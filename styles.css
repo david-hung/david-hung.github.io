@@ -454,6 +454,7 @@ h3 {
 }
 
 .tag-row span,
+.tag-row a,
 .skills-cloud span {
   display: inline-flex;
   min-height: 32px;
@@ -464,10 +465,17 @@ h3 {
   color: var(--muted);
   font-size: 0.84rem;
   font-weight: 800;
+  text-decoration: none;
 }
 
-.tag-row span {
+.tag-row span,
+.tag-row a {
   padding: 6px 10px;
+}
+
+.tag-row a {
+  border-color: rgba(14, 107, 87, 0.42);
+  color: var(--green);
 }
 
 .skills-section {
@@ -913,6 +921,7 @@ h3 {
   }
 
   .tag-row span,
+  .tag-row a,
   .skills-cloud span {
     min-height: 30px;
     font-size: 0.78rem;
