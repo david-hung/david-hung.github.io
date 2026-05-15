@@ -16,7 +16,17 @@
         <span class="brand-mark">DH</span>
         <span>David Hung</span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        data-menu-toggle
+      >
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation" data-nav>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
