@@ -133,15 +133,25 @@ h2,
 h3,
 p {
   margin-top: 0;
+}
+
+p,
+li,
+.tag-row span,
+.skills-cloud span,
+.metric-strip span {
   overflow-wrap: anywhere;
 }
 
 h1 {
   max-width: 780px;
   margin-bottom: 22px;
-  font-size: clamp(3.1rem, 8vw, 6.9rem);
-  line-height: 0.92;
+  font-size: clamp(3.1rem, 7.2vw, 6.35rem);
+  line-height: 0.94;
   letter-spacing: 0;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 h2 {
